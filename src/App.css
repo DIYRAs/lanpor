@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+* {
+    scrollbar-width: none;
+}
+
+.flex-col-center {
+    @apply flex flex-col items-center justify-center
+}
