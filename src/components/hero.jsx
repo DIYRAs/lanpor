@@ -2,8 +2,8 @@ export default function Hero() {
 
     return (
         <>
-            <div className="relative overflow-hidden hero bg-[url(mountain_road.jpg)] bg-[50%_70%] min-h-screen">
-                <div className="fixed top-0 navbar bg-slate-800/50 backdrop-blur-xs shadow-sm">
+            <div className="relative overflow-hidden hero bg-[url(/mountain_road.jpg)] bg-[50%_70%] min-h-screen">
+                <div className="fixed top-0 z-50 navbar bg-slate-800/50 backdrop-blur-xs shadow-sm">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">

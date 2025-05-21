@@ -8,3 +8,11 @@
 .flex-col-center {
     @apply flex flex-col items-center justify-center
 }
+
+.flex-col-start {
+    @apply flex flex-col items-start justify-center
+}
+
+.flex-center {
+    @apply flex flex-wrap items-center justify-center
+}
