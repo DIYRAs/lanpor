@@ -2,7 +2,7 @@ export default function Hero() {
 
     return (
         <>
-            <div className="relative overflow-hidden hero bg-[url(/mountain_road.jpg)] bg-[50%_70%] min-h-screen">
+            <div className="text-white relative overflow-hidden hero bg-[url(/mountain_road.jpg)] bg-[50%_70%] min-h-screen">
                 <div className="fixed top-0 z-50 navbar bg-slate-800/50 backdrop-blur-xs shadow-sm">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -19,7 +19,7 @@ export default function Hero() {
                         </div>
                     </div>
                     <div className="navbar-center">
-                        <a className="btn btn-ghost text-xl">daisyUI</a>
+                        <a className="btn btn-ghost text-xl font-bold tracking-widest">DIYRA</a>
                     </div>
                     <div className="navbar-end">
                         <button className="btn btn-ghost btn-circle">
@@ -34,7 +34,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <img src="porse.png" className="absolute right-0 sm:right-52 bottom-0 w-xl h-auto brightness-50 drop-shadow-xl/50 object-cover object-center" />
+                <img src="porse.png" className="absolute right-0 sm:right-52 bottom-6 w-xl h-auto brightness-50 drop-shadow-xl/50 object-cover object-center" />
                 <div className="hero-content text-center">
                     <div className="max-w-md space-y-18">
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">Hello there</h1>

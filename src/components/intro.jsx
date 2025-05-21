@@ -2,7 +2,7 @@ export default function Intro() {
 
     return (
         <>
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero bg-base-200 min-h-screen py-8 text-white">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-18">
                     <img
                         src="porse_front.png"
