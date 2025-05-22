@@ -3,6 +3,7 @@
 
 * {
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 .flex-col-center {

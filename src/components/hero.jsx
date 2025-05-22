@@ -1,3 +1,6 @@
+import Slide_text from "../animations/slide_text"
+import Reveal from "../animations/reveal"
+
 export default function Hero() {
 
     return (
@@ -37,12 +40,21 @@ export default function Hero() {
                 <img src="porse.png" className="absolute right-0 sm:right-52 bottom-6 w-xl h-auto brightness-50 drop-shadow-xl/50 object-cover object-center" />
                 <div className="hero-content text-center">
                     <div className="max-w-md space-y-18">
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">Hello there</h1>
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+                            <Slide_text delay={0.5}>Hello There</Slide_text>
+                        </h1>
                         <p className="py-6">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
+                            <Slide_text split=" " duration={0.4} delay={0.05}>
+                                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                                quasi. In deleniti eaque aut repudiandae et a id nisi.
+                            </Slide_text>
                         </p>
-                        <button className="btn btn-outline">Get Started</button>
+
+                        <Reveal direction={'up'} delay={0.5}>
+                            <button className="btn btn-outline">
+                                <a href="#intro">Get Started</a>
+                            </button>
+                        </Reveal>
                     </div>
                 </div>
             </div>
