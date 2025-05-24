@@ -3,7 +3,7 @@ import Reveal from "../animations/reveal"
 function Card({ title, sub_title, desc, sub_desc, delay }) {
     return (
         <Reveal direction={'up'} delay={delay}>
-            <div className="card bg-base-300 w-80 shadow-sm">
+            <div className="card bg-gray-950 text-white w-80 shadow-sm">
                 <figure>
                     <img
                         src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
