@@ -6,6 +6,11 @@
     scroll-behavior: smooth;
 }
 
+body {
+    /* background-color: #04043136; */
+    background-color: rgb(0, 18, 34);
+}
+
 .flex-col-center {
     @apply flex flex-col items-center justify-center
 }

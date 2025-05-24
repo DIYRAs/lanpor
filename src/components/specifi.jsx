@@ -1,5 +1,6 @@
 import Reveal from "../animations/reveal"
-import Slide_text from "../animations/slide_text"
+import { useEffect, useRef, useState } from "react";
+import { useMotionValue, motion, animate, useInView } from "framer-motion";
 import ScrambleText from "../animations/random_char"
 
 export default function Specifi() {
@@ -13,11 +14,32 @@ export default function Specifi() {
         </Reveal>
     );
 
+    const Counter = ({ numbers }) => {
+        const [value, setValue] = useState(0);
+        const count = useMotionValue(0);
+
+        const ref = useRef(null)
+        const isInView = useInView(ref, { once: true })
+
+        useEffect(() => {
+            if (isInView) {
+                const controls = animate(count, numbers, {
+                    duration: 2,
+                    onUpdate: (latest) => setValue(Math.floor(latest)),
+                });
+
+                return () => controls.stop();
+            }
+        }, [isInView]);
+
+        return <motion.span ref={ref}>{value}</motion.span>;
+    };
+
     const specsData = [
-        { numbers: '00', numbers_sub: 'xxx', desc: 'xxx xx' },
-        { numbers: '01', numbers_sub: 'yyy', desc: 'yyy yy' },
-        { numbers: '02', numbers_sub: 'zzz', desc: 'zzz zz' },
-        { numbers: '03', numbers_sub: 'aaa', desc: 'aaa aa' }
+        { numbers: <Counter numbers={150} />, numbers_sub: 'xxx', desc: 'xxx xx' },
+        { numbers: <Counter numbers={100} />, numbers_sub: 'yyy', desc: 'yyy yy' },
+        { numbers: <Counter numbers={70} />, numbers_sub: 'zzz', desc: 'zzz zz' },
+        { numbers: <Counter numbers={5} />, numbers_sub: 'aaa', desc: 'aaa aa' }
     ];
 
     return (
@@ -38,7 +60,7 @@ export default function Specifi() {
                         </Reveal>
                     </p>
 
-                    <div className="w-85 h-max flex-center gap-x-26 gap-y-5">
+                    <div className="w-85 h-max grid grid-cols-2 pl-10 gap-x-18 gap-y-5">
                         {specsData.map((item, index) =>
                             specs({ ...item, delay: 0.2 * index, key: index })
                         )}

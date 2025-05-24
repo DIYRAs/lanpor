@@ -5,7 +5,7 @@ export default function Intro() {
 
     return (
         <>
-            <div id="intro" className="hero bg-base-200 min-h-screen py-8 text-white">
+            <div id="intro" className="hero min-h-screen py-8 text-white">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-18">
                     <Reveal direction='down'>
                         <img

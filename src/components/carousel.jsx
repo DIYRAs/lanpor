@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 export default function Carousel() {
 
     const carousel = () => {
@@ -6,9 +8,11 @@ export default function Carousel() {
         return (
             <div className="carousel carousel-center rounded-box p-20 gap-10">
                 {img_array.map((img, index) => (
-                    <div className="carousel-item flex-center" key={index}>
-                        <img src={img}
-                        className="w-[300px] h-[150px] sm:w-[1000px] sm:h-[300px] object-contain object-center border-x" />
+                    <div className="carousel-item flex-center" key={index} >
+                        <motion.img src={img}
+                            whileHover={{ scale: 0.9 }}
+                            whileTap={{ scale: 1.1 }}
+                            className="w-[300px] h-[150px] sm:w-[1000px] sm:h-[300px] object-contain object-center border-x" />
                     </div>
                 ))}
             </div>
