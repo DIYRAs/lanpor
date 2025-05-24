@@ -51,7 +51,7 @@ export default function Specifi() {
                         className="absolute bottom-16 right-4 md:bottom-24 md:right-14 h-auto w-72 md:w-lg brightness-[65%]" />
                 </div>
 
-                <div className="bg-base-300 h-[400px] sm:h-auto sm:flex-1 grow flex-col-center gap-16 md:gap-36 items-stretch py-8">
+                <div className="bg-gray-950 h-[400px] sm:h-auto sm:flex-1 grow flex-col-center gap-16 md:gap-36 items-stretch py-8">
                     <p className="text-2xl md:text-4xl max-w-[400px] font-semibold tracking-widest text-center">
                         <Reveal delay={0} direction={'down'} text={true}>
                             <ScrambleText revealDelay={80}>

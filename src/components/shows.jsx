@@ -27,8 +27,6 @@ export default function Shows() {
                     className="absolute z-20 bottom-12 sm:bottom-10 h-auto w-80 sm:w-6xl"
                     ref={imgRef}
                     onClick={switch_img}
-                    initial={{ x: 300, display: 'hidden', scale: 0 }}
-                    whileInView={{ x: 0, display: ' block', scale: 1 }}
                     whileTap={{ x: -200, opacity: 0, scale: 0.9 }} />
 
                 <div className="absolute bottom-3 sm:bottom-6 h-10/12 w-10/12
@@ -37,7 +35,7 @@ export default function Shows() {
                         <Slide_text duration={0.4}>Inggih E-Performance</Slide_text>
                     </p>
 
-                    <p className=' line-clamp-2'>
+                    <p className=' line-clamp-2 text-white'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                         ac justo vitae urna malesuada tempus. Cras non pulvinar risus.
                         Sed vitae scelerisque nisl. Integer commodo justo nec est blandit,
